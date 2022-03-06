@@ -195,6 +195,16 @@ button:hover{
 		word-break: break-all;
 		line-height: 90%;
 		font-size: 150px;
+		animation:fade 10s ease-out forwards;
+	}
+
+	@keyframes fade{
+		from{
+			opacity: 100%;
+		}
+		to{
+			opacity:0%;
+		}
 	}
 
 	#sub{

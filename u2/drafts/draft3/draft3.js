@@ -10,18 +10,6 @@ function scrollFunction() {
   }
 }
 
-var x = window.matchMedia("(max-width: 700px)")
-myFunction(x)
-x.addListener(myFunction)
-
-function myFunction(x) {
-  if (x.matches) {
-    document.getElementById("head").style.display = none;
-  } else {
-   document.getElementById("head").style.display = block;
-  }
-}
-
 function buff() {
 location.reload();
 }
