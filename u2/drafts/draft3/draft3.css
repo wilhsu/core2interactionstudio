@@ -1,0 +1,205 @@
+body{
+	background-image: linear-gradient(#ffaa00,#f06553,#3c3b5f,#381c2a);
+	height: 100%;
+}
+
+.text{
+	/*font-family: ivypresto-display, serif;
+	font-weight: 100;
+	font-style: normal;*/
+	/*font-size: 24px;*/
+	letter-spacing: 0.7px;
+	color: white;
+	z-index: 1;
+}
+
+#ital{
+	font-family: ivypresto-headline,serif;
+	font-weight: 100;
+	font-style: italic;
+}
+
+.container{
+	display: flex;
+}
+
+.boxtop{
+	font-family: bely-display, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	position: sticky;
+	left:0;
+	top:0;
+	color:#d00000;
+	padding: 35px;
+	z-index: -1;
+}
+
+/*.boxleft{
+	width:45%;
+	margin-left: 20%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}*/
+
+.boxright{
+	width: 23%;
+	margin:5%;
+}
+
+.chat{
+	border:2px solid white;
+	padding:15px;
+	display: none;
+	font-family: comic sans MS;
+	font-size:18px;
+	border-radius: 5px;
+	animation: spin 1s;
+	color: white;
+	box-shadow: 0 0 25px 5px #fe019a;
+}
+
+@keyframes spin{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+#head{
+	font-size: 200px;
+	line-height: 100%;
+	transition:0.7s ease-in;
+	color: rgba(150,0,0,1);
+}
+
+#sub{
+	margin-top: 2%;
+	font-size: 100px;
+	text-align: right;
+	color: rgba(208,0,0,0.8);
+	transition:0.7s ease-in;
+}
+
+#person1{
+	position: relative;
+	top: 370px;
+}
+
+#person2{
+	position: relative;
+	top: 450px;
+}
+
+#person3{
+	position: relative;
+	top: 1450px;
+}
+
+#person4{
+	position: relative;
+	top: 2250px;
+}
+
+#person5{
+	position: relative;
+	top: 2350px;
+}
+
+#person6{
+	position: relative;
+	top: 4050px;
+}
+
+#person7{
+	position: relative;
+	top: 4250px;
+}
+
+#person8{
+	position: relative;
+	top: 4750px;
+}
+
+#person9{
+	position: relative;
+	top: 4800px;
+}
+
+#person10{
+	position: relative;
+	top: 6500px;
+}
+
+button{
+	background-color: transparent;
+	border:0px solid transparent;
+	font-family: ivypresto-display, serif;
+	font-size: 24px;
+	/*cursor: pointer;*/
+	color:white;
+	/*text-shadow: 0 0 3px #d00000;*/
+}
+
+button:hover{
+	cursor: help;
+	color:transparent;
+	text-shadow: 0 0 3px white;
+}
+
+.foot{
+	/*height:300px;*/
+	/*background-color: black;*/
+	margin: 0;
+	text-align: center;
+	color: white;
+	font-size:30px;
+}
+
+@media screen and (max-width: 2000px){
+	.boxleft{
+	width:45%;
+	margin-left: 20%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+	font-size: 24px;
+	font-family: ivypresto-headline, serif;
+	font-weight: 100;
+	font-style: normal;
+}
+
+@media screen and (max-width: 700px){
+	body{}
+	.boxleft{
+		width:80%;
+		margin: 12%;
+		font-size: 28px;
+		font-family: ivypresto-headline,serif;
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	.boxright{
+		width:0%;
+	}
+
+	#head{
+		overflow: wrap;
+		word-break: break-all;
+		line-height: 90%;
+		font-size: 150px;
+	}
+
+	#sub{
+		font-size: 50px;
+	}
+
+	button{
+		font-size: 30px;
+		font-family: ivypresto-headline,serif;
+		font-weight: 700;
+		font-style: normal;
+	}
+}

@@ -1,0 +1,163 @@
+a:visited{color:transparent;text-decoration: none;}
+a{color:transparent;text-decoration: none;}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+
+img{
+	width:50%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	animation:spinz 4s infinite ease-in-out;
+}
+
+@keyframes spinz{
+	from{
+		transform: rotate(0deg);
+	}
+	to{transform:rotate(360deg);
+	}
+}
+
+img:hover{
+	animation-play-state: paused;
+	transition-delay: 1s;
+}
+
+body{
+	background-color: black;
+	color:white;
+	font-family: 'Work Sans', sans-serif;
+	margin:0;
+}
+
+h1{
+	font-family: bely-display,sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	font-size: 230px;
+	padding:0;
+	margin: 0;
+}
+
+h2{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	color:gray;
+}
+
+a{
+	animation:brrr 3s ease-in-out infinite alternate;
+	transition: scale, 2s;
+}
+
+a:hover{
+	transform: scale(5,5);
+}
+
+@keyframes brrr{
+	0%{
+		text-shadow:0 0 0 white;
+	}
+
+	/*50%{
+		text-shadow:0 0 10px white;
+	}
+*/
+	100%{
+		text-shadow:0 0 15px white;
+	}
+}
+
+p{
+	font-size:30px;
+	padding:10px;
+	margin:30px;
+	/*width:60%;*/
+}
+
+#name{
+	text-decoration: underline;
+	text-decoration-color: blue;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+}
+
+.container2{
+	display: flex;
+	flex-direction: row;
+}
+
+.box1{
+	width: 100%;
+}
+
+.box2{
+	width:60%;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+.description p{
+	font-size: 18px;
+	justify-content: center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.description{
+	border:2px solid blue;
+	margin:0;
+	padding: 10px;
+}
+
+.box3{
+	width:32%;
+}
+
+.box2 p{
+	color:transparent;
+	text-shadow: 0 0 8px white;
+}
+
+.box2 p:target{
+	color:white;
+	text-shadow: none;
+	/*display: block, forwards;*/
+}
+
+#one{
+	justify-content: left;
+}
+
+#two{
+	animation: slide 3s linear infinite;
+	justify-content: left;
+}
+
+@keyframes slide{
+	50%{
+		transform:translateX(100vw);
+	}
+
+	50.001%{
+		transform:translateX(-100vw);
+	}
+}
+
+/*
+#two:hover:after{
+	content:"...";
+}
+*/
+

@@ -1,0 +1,180 @@
+/*a{background-color: #fe019a;color:white;text-decoration:none;}*/
+
+html{
+	scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #9e745d;
+  position: relative;
+
+  font-family: ivypresto-display, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a::before {
+  content: '';
+  background-color: #B7B7A4;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+a:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
+body{
+	background-image: linear-gradient(#a5a58d,transparent);
+	margin:0;
+	color:#9e745d;
+}
+
+p{
+	font-family: ivypresto-display, serif;
+	font-weight: 100;
+	font-style: normal;
+	font-size: 20px;
+	letter-spacing: 0.7px;
+}
+
+#head{
+  	padding: 20px 50px;
+  	color: #4b4f3d;
+  	text-align: left;
+  	font-size: 200px;
+  	top: 0;
+  	width: 100vw;
+  	height:50%;
+  	transition: 0.8s ease-in;
+  	line-height: 90%;
+}
+
+#sub{
+  	padding: 20px 50px;
+  	color: rgba(75,79,61,0.8);
+  	text-align: right;
+  	font-size: 100px;
+  	top: 0;
+  	width: 100vw;
+  	height:50%;
+  	transition: 0.8s ease-in;
+  	z-index: -2;
+}
+
+/*#book{
+  	padding: 20px 100px;
+  	margin:4%;
+  	color: #4b4f3d;
+  	text-align: left;
+  	font-size: 50px;
+  	top: 0;
+  	width: 100%;
+  	height:100%;
+  	transition: 0.8s ease-in;
+  	z-index: 2;
+}*/
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	width:100vw;
+}
+
+.boxtop{
+	
+	height: 100%;
+	width:100%;
+	margin:0;
+	font-family: bely-display, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	position: sticky;
+	top:0;
+	left:0;
+	display: block;
+	z-index: 2;
+}
+
+.boxleft{
+	width:40%;
+	padding: 40px;
+	margin-top: 20%;
+	margin-right: 1%;
+	margin-left: 18%;
+	z-index: 2;
+
+}
+
+.boxright{
+	width:30%;
+	/*padding: 40px;*/
+	margin-top: 30%;
+	margin-right: 1%;
+	margin-left: 1%;
+}
+
+.chat{
+	border: 2px solid #6b705c;
+	padding:10px;
+	border-radius: 10px;
+	margin-top:10px;
+	overflow: wrap;
+	color:#6b705c;
+	float:right;
+
+	display: none;
+
+	font-family: brandon-grotesque,sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 20px;
+
+	animation:boing 3s ease-out infinite alternate;
+}
+
+@keyframes boing{
+	0%{
+		transform: translateY(10px);
+	}
+
+	50%{
+		transform: translateY(-10px);
+	}
+}
+
+#name{
+	color:#6b705c;
+}
+
+:target{
+	display: block;
+	margin: 3%;
+}
+
+#person1{
+	position: absolute;
+	top:980px;
+}
+
+#person2{
+	position: absolute;
+	top:1020px;
+}
+
+#a1:hover{
+	color:transparent;
+	transition:3s;
+}
+
+#a2:hover{
+	text-decoration: line-through;
+}
