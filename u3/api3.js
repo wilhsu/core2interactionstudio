@@ -35,12 +35,12 @@ async function getData(){
 
     // making an EVENTLISTENER on html element
     select_menu.addEventListener('change', function handleChange(event){
-        imageSearch();
+        yearSearch();
         console.log("succesfully searched");
     })
 
     select_menutwo.addEventListener('change', function handleChange(event){
-        imageSearch();
+        manufacturerSearch();
         console.log("succesfully searched");
     })
 }
@@ -85,20 +85,31 @@ function removeDuplicates(arr){
 }
 
 // to search for correct image and years
-function imageSearch(){
+function yearSearch(){
     console.log(select_menu.value);
-    console.log(select_menutwo.value)
 
     // filter function
     const results = apiData.filter((entry) => {
-        const yrMatch = entry.year.includes(select_menu.value);
-
-        const mbMatch = entry.manufacturer.includes(select_menutwo.value);
-        return mbMatch, yrMatch;
+        const match = entry.year.includes(select_menu.value);
+        return match;
     })
 
     renderSortedImages(results, image_container);
 }
+
+function manufacturerSearch(){
+    console.log(select_menutwo.value);
+
+    // filter function
+    const results = apiData.filter((entry) => {
+        const match = entry.manufacturer.includes(select_menutwo.value);
+        return match;
+    })
+
+    renderSortedImages(results, image_container);
+}
+
+
 
 function renderSortedImages(sortedData, container){
     container.innerHTML = "";
