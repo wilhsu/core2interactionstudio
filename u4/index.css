@@ -1,0 +1,192 @@
+.heading{
+    font-family: compendium,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 150px;
+    padding-top: 30px;
+    line-height: 100px;
+}
+
+.flexcontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.glyphshere{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.glyphshere img{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bigchonk{
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 15px;
+}
+
+.slidecontainer{
+    font-family: bilo,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 22px;
+    color: grey;
+    opacity: 0.6;
+
+}
+
+input #Slider{
+    width: 20%;
+}
+
+input{
+    margin: 20px;
+}
+
+.h1{
+    overflow-wrap: break-word;
+}
+
+.me{
+    text-decoration: underline dotted red 5px;
+}
+
+/* #imagecontainer{
+    width: auto;
+    height: 80px;
+    background-color: rgb(198, 198, 198);
+    color: whitesmoke;
+    border-radius: 15px;
+    padding: 20px;
+
+    font-family: bilo,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 86px;
+} */
+
+#imagecontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+#desc{
+    font-family: bilo,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    border-radius: 15px;
+    height: 50px;
+    text-align: center;
+    color: rgb(188, 188, 188);
+    opacity: 0.4;
+    word-break: break-all;
+}
+
+#desc2{
+    font-family: bilo,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+    color: rgb(188, 188, 188);
+}
+
+#imagecontainer img{
+    width: 7%;
+    margin-left: -10px;
+    margin-right: -10px;
+    position: relative;
+}
+
+.glyphshere img:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+#stopit{
+    width: 90vw;
+}
+
+.tools{
+    flex-direction: row;
+    position: sticky;
+    bottom: 0px;
+    align-items: center;
+}
+
+.icons{
+    width: 70px;
+    /* padding-left:50px; */
+    opacity: 0.2;
+    align-content: center;
+}
+
+.functions{
+    right:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+}
+
+/* me */
+/* .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+
+  
+  /* Tooltip text */
+  .me .meagain {
+    visibility: hidden;
+    width: 20%;
+    /* background-color: black; */
+    /* color: #fff; */
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .me:hover{
+    cursor: help;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .me:hover .meagain {
+    visibility: visible;
+    cursor: help;
+  }
