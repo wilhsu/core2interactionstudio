@@ -105,7 +105,7 @@ input{
     border: none;
     height: 50px;
     text-align: center;
-    color: rgb(188, 188, 188);
+    color: grey;
     /* opacity: 0.8; */
     word-break: break-all;
     cursor: pointer;
@@ -116,7 +116,7 @@ input{
     font-weight: 300;
     font-style: normal;
     font-size: 24px;
-    color: rgb(188, 188, 188);
+    color: rgb(86, 86, 86);
 }
 
 #imagecontainer img{
@@ -208,9 +208,18 @@ input{
     cursor: help;
   }
 
-  @media screen and (max-width: 700px){
+  /* @media screen and (max-width: 700px){
       input{
           width: 60%;
           margin:20px;
       }
+  } */
+
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px){
+    input{
+        width: 60%;
+        margin:20px;
+    }
   }
