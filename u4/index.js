@@ -72,11 +72,41 @@ $( "#refresh" ).click(function refresh() {
 // }
 
 // main();
+function saveimg(){
+  html2canvas(document.querySelector("#imagecontainer")).then(canvas => {
+    // document.body.appendChild(canvas);
+    // console.log(canvas.toDataURL("image/jpeg", 0.9));
+  });
+}
+  // var ajax = new XMLHttpRequest();
+  // var canvas = document.querySelector("#imagecontainer");
+  // ajax.open("POST", "save-capture.php", true);
+  // ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  // ajax.send("image=" + canvas.toDataURL("image/jpeg", 0.9));
 
-html2canvas(document.querySelector("#imagecontainer")).then(canvas => {
-  document.body.appendChild(canvas)
+  // ajax.onreadystatechange = function(){
+  //   if (this.readyState == 4 && this.status == 200){
+  //     console.log(this.responseText);
+  //   }
+  // }
+// }
+
+var element = $("#imagecontainer"); // global variable
+var getCanvas; // global variable
+$('document').ready(function(){
+  html2canvas(element, {
+    onrendered: function (canvas) {
+      $("#previewImage").append(canvas);
+      getCanvas = canvas;
+    }
+  });
 });
-
+$("#download").on('click', function () {
+  var imageData = getCanvas.toDataURL("image/png");
+  // Now browser starts downloading it instead of just showing it
+  var newData = imageData.replace(/^data:image\/png/, "data:application/octet-stream");
+  $("#download").attr("download", "image.png").attr("href", newData);
+});
 
 function shareLink() {
     var link = "hello";
@@ -84,4 +114,8 @@ function shareLink() {
   
     /* Alert the copied text */
     alert("link copied! lol u want more people to see this? ok");
+  }
+
+  function sorryxd(){
+    alert("lmao i did not figure out how 2 code this so u gotta screenshot da image!!sorry babes!! xddd");
   }
