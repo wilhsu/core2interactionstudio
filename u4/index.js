@@ -38,7 +38,18 @@ document.addEventListener('keyup', function(evt){
   
 })
 
-$( "#refresh" ).click(function() {
+
+function showHide(haha){
+	let x = document.getElementById(haha);
+	if (x.style.display == "block") {
+		x.style.display = "none";
+	} else {
+		x.style.display = "block";
+	}
+}
+
+
+$( "#refresh" ).click(function refresh() {
   $( "#imagecontainer" ).empty();
 });
 
@@ -61,6 +72,10 @@ $( "#refresh" ).click(function() {
 // }
 
 // main();
+
+html2canvas(document.querySelector("#imagecontainer")).then(canvas => {
+  document.body.appendChild(canvas)
+});
 
 
 function shareLink() {

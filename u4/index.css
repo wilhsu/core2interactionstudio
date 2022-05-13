@@ -8,6 +8,20 @@
     line-height: 100px;
 }
 
+#haha{
+    display: none;
+}
+
+@keyframes spin {
+    from{
+        transform: rotateY(0deg);
+    }
+
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
 .flexcontainer{
     display: flex;
     flex-direction: column;
@@ -40,7 +54,7 @@
     font-style: normal;
     font-size: 22px;
     color: grey;
-    opacity: 0.6;
+    opacity: 0.8;
 
 }
 
@@ -82,7 +96,7 @@ input{
     margin: 20px;
 }
 
-#desc{
+.desc{
     font-family: bilo,sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -91,7 +105,7 @@ input{
     height: 50px;
     text-align: center;
     color: rgb(188, 188, 188);
-    opacity: 0.4;
+    /* opacity: 0.8; */
     word-break: break-all;
 }
 
@@ -146,8 +160,9 @@ input{
 .icons{
     width: 70px;
     /* padding-left:50px; */
-    opacity: 0.2;
+    opacity: 0.5;
     align-content: center;
+    cursor: pointer;
 }
 
 .functions{
@@ -189,4 +204,10 @@ input{
   .me:hover .meagain {
     visibility: visible;
     cursor: help;
+  }
+
+  @media screen and (max-width: 700px){
+      .bigchonk{
+          background-color: red;
+      }
   }
